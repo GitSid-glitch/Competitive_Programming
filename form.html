@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Begins here:</p>
+    <form>
+        <label for="name">Name (4 to 8 characters)</label>
+        <input type="text" value="Sample" id="name" placeholder="Enter your name" name="Name" minlength="3" maxlength="10"/>
+        <label for="email">Drop your email</label>
+        <input date = "email" type="checkbox"/>
+        <label for="male">Male</label>
+        <input type="radio" id="male" value="male" name="Gender" checked/>
+        <button type="submit">Submit Details</button>
+    </form>
+
+    <form>
+        <label for="lunchTime">Lunch Time:</label>
+        <input
+        id="lunchTime"
+        type="time"
+        min="11:00:01"
+        max="23:00:04"/>
+    </form>
+
+    <form>
+        <label for="animals-select">Favourite Animals:</label>
+        <select name="animals" id="animals-select" multiple>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="parrot" selected>Parrot</option>
+            <option value="swan">Swan</option>
+        </select>
+    </form>
+</body>
+</html>

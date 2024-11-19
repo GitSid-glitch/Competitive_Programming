@@ -1,0 +1,1 @@
+{"name":"Local: tree","url":"/Users/siddharthshukla/Desktop/WEB DEV/tree.py","tests":[{"id":1731769162501,"input":"2\n3 2 3\n4 2 3","output":"-1\n1 2\n1 3\n1 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/siddharthshukla/Desktop/WEB DEV/tree.py","group":"local","local":true}

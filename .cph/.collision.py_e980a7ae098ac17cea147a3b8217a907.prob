@@ -1,0 +1,1 @@
+{"name":"Local: collision","url":"/Users/siddharthshukla/Desktop/WEB DEV/collision.py","tests":[{"id":1731594583986,"input":"1 1\n1 2\n2 1","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/siddharthshukla/Desktop/WEB DEV/collision.py","group":"local","local":true}

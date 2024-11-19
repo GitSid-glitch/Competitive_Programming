@@ -1,0 +1,39 @@
+def create_difference_array_2d(matrix):
+    rows, cols = len(matrix), len(matrix[0])
+    diff = [[0] * (cols + 1) for _ in range(rows + 1)]
+    for i in range(rows):
+        for j in range(cols):
+            diff[i][j] = matrix[i][j] - (matrix[i-1][j] if i > 0 else 0) - (matrix[i][j-1] if j > 0 else 0) + (matrix[i-1][j-1] if i > 0 and j > 0 else 0)
+    return diff
+def apply_update_2d(diff, x1, y1, x2, y2, val):
+    diff[x1][y1] += val
+    if y2 + 1 < len(diff[0]):
+        diff[x1][y2 + 1] -= val
+    if x2 + 1 < len(diff):
+        diff[x2 + 1][y1] -= val
+    if x2 + 1 < len(diff) and y2 + 1 < len(diff[0]):
+        diff[x2 + 1][y2 + 1] += val
+def finalize_2d(diff):
+    rows, cols = len(diff) - 1, len(diff[0]) - 1
+    result = [[0] * cols for _ in range(rows)]
+    for i in range(rows):
+        for j in range(cols):
+            result[i][j] = diff[i][j]
+            if i > 0:
+                result[i][j] += result[i-1][j]
+            if j > 0:
+                result[i][j] += result[i][j-1]
+            if i > 0 and j > 0:
+                result[i][j] -= result[i-1][j-1]
+    return result
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+diff = create_difference_array_2d(matrix)
+apply_update_2d(diff, 0, 0, 1, 1, 10)
+updated_matrix = finalize_2d(diff)
+print("Updated matrix:")
+for row in updated_matrix:
+    print(row)
